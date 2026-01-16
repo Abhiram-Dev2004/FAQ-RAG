@@ -48,35 +48,26 @@ Knowledge Base Management
 Interactive Q&A
 <img src="q&a.png" alt="Question Answering Interface" width="800"/>
 </div>
-
 Architecture
-┌─────────────────┐
-│  User Browser   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│   Next.js Frontend          │
-│   • Auth UI                 │
-│   • PDF Upload              │
-│   • Chat Interface          │
-└────────┬────────────────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│   Flask Backend API         │
-│   • JWT Validation          │
-│   • PDF Processing          │
-│   • Vector Operations       │
-└────────┬────────────────────┘
-         │
-         ├────────────────┬────────────────────┐
-         ▼                ▼                    ▼
-┌──────────────┐  ┌──────────────┐  ┌─────────────────┐
-│ SQLAlchemy   │  │   Pinecone   │  │   Mistral AI    │
-│ (User Data)  │  │  (Vectors)   │  │  • Embeddings   │
-│              │  │  Namespaced  │  │  • LLM          │
-└──────────────┘  └──────────────┘  └─────────────────┘
+<img src="flowchat.png" alt="Question Answering Interface" width="800"/>
+</div>
 
-Tech Stack
-ComponentTechnologyPurposeFrontendNext.js 14, React, TypeScriptUser interface and interactionBackendFlaskREST API serverAuthenticationJWT, SQLAlchemyUser management and authVector DatabasePineconeNamespace-based vector storageEmbeddingsMistral EmbeddingsDocument and query vectorizationLLMMistral AIAnswer generationUser DatabaseSQLAlchemyUser credentials and metadata
+Why Namespace-Based Retrieval?
+Traditional RAG systems store all embeddings in a shared space, leading to:
+
+❌ Irrelevant context from other users' documents
+❌ Privacy and data leakage concerns
+❌ Reduced accuracy in multi-tenant environments
+
+RAGworks Solution with Pinecone Namespaces:
+
+✅ Dedicated namespace per user/document set
+✅ Complete data isolation at the vector database level
+✅ Higher precision retrieval with no cross-contamination
+✅ Scalable multi-tenant architecture
+✅ Efficient resource utilization
+
+Contact
+Abhiram Karanth
+Project Link: https://github.com/abhiram-karanth-core/faq-rag
+Live Demo: https://ragworks-wheat.vercel.app

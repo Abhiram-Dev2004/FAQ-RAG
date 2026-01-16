@@ -78,7 +78,7 @@ export function ChatInterface() {
                         </div>
                         {!token ? (
                             <>
-                                <h3 className="text-xl font-semibold text-foreground mb-2">Welcome to Neural AI</h3>
+                                <h3 className="text-xl font-semibold text-foreground mb-2">Welcome to RAGworks</h3>
                                 <p className="text-sm max-w-sm mb-4">
                                     Please login to access the knowledge base and start chatting.
                                 </p>

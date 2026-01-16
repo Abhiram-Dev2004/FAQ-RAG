@@ -1,73 +1,94 @@
-RAGworks
+# RAGworks
 
-An intelligent document Q&A platform powered by Retrieval-Augmented Generation (RAG), enabling secure, context-aware querying of PDF documents with namespace-based isolation.
+> An intelligent document Q&A platform powered by Retrieval-Augmented Generation (RAG), enabling secure, context-aware querying of PDF documents with namespace-based isolation.
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://ragworks-wheat.vercel.app)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![Flask](https://img.shields.io/badge/Flask-3.0+-lightgrey)](https://flask.palletsprojects.com/)
 
-Overview
+---
+
+## Overview
+
 RAGworks is a production-ready document Q&A system that combines PDF processing, vector search, and Large Language Models to provide accurate, context-aware answers. Built with enterprise-grade security and multi-tenant architecture, it's ideal for knowledge bases, internal documentation, and AI-powered customer support.
-Key Differentiator: Namespace-based vector storage using Pinecone ensures complete data isolation between users and document sets, preventing information leakage while maintaining high retrieval accuracy.
 
-Features
-🔐 Secure Authentication
+**Key Differentiator:** Namespace-based vector storage using Pinecone ensures complete data isolation between users and document sets, preventing information leakage while maintaining high retrieval accuracy.
 
-JWT-based user authentication
-User credential storage with SQLAlchemy
-Protected API endpoints
-Session management with token-based access control
+---
 
-📄 PDF Document Processing
+## Features
 
-Upload PDFs up to 10MB
-Automatic text extraction and chunking
-Mistral-powered embedding generation
-Persistent knowledge base storage in Pinecone
+### 🔐 Secure Authentication
+- JWT-based user authentication
+- User credential storage with SQLAlchemy
+- Protected API endpoints
+- Session management with token-based access control
 
-🧠 Intelligent Retrieval
+### 📄 PDF Document Processing
+- Upload PDFs up to 10MB
+- Automatic text extraction and chunking
+- Mistral-powered embedding generation
+- Persistent knowledge base storage in Pinecone
 
-Namespace isolation - Each user/document set gets a dedicated Pinecone namespace
-Semantic search using Mistral embeddings
-Context-aware answer generation with Mistral LLM
-Reduced hallucinations through grounded retrieval
+### 🧠 Intelligent Retrieval
+- **Namespace isolation** - Each user/document set gets a dedicated Pinecone namespace
+- Semantic search using Mistral embeddings
+- Context-aware answer generation with Mistral LLM
+- Reduced hallucinations through grounded retrieval
 
-💻 Modern Tech Stack
+### 💻 Modern Tech Stack
+- **Frontend:** Next.js 14, React, TypeScript, Tailwind CSS
+- **Backend:** Flask, SQLAlchemy, JWT authentication
+- **AI/ML:** Mistral AI (LLM + Embeddings)
+- **Vector Database:** Pinecone (namespace-based storage)
+- **User Database:** SQLAlchemy
+- **Deployment:** Vercel (Frontend), Cloud hosting (Backend)
 
-Frontend: Next.js 14, React, TypeScript, Tailwind CSS
-Backend: Flask, SQLAlchemy, JWT authentication
-AI/ML: Mistral AI (LLM + Embeddings)
-Vector Database: Pinecone (namespace-based storage)
-User Database: SQLAlchemy
-Deployment: Vercel (Frontend), Cloud hosting (Backend)
+---
 
+## Screenshots
 
-Screenshots
 <div align="center">
-Authentication
+
+### Authentication
 <img src="auth.png" alt="Login Page" width="800"/>
-Knowledge Base Management
+
+### Knowledge Base Management
 <img src="home.png" alt="Home Page" width="800"/>
-Interactive Q&A
+
+### Interactive Q&A
 <img src="q&a.png" alt="Question Answering Interface" width="800"/>
-</div>
-Architecture
-<img src="flowchat.png" alt="flowchart" width="800"/>
+
 </div>
 
-Why Namespace-Based Retrieval?
+---
+
+## Why Namespace-Based Retrieval?
+
 Traditional RAG systems store all embeddings in a shared space, leading to:
 
-❌ Irrelevant context from other users' documents
-❌ Privacy and data leakage concerns
-❌ Reduced accuracy in multi-tenant environments
+- ❌ Irrelevant context from other users' documents
+- ❌ Privacy and data leakage concerns
+- ❌ Reduced accuracy in multi-tenant environments
 
-RAGworks Solution with Pinecone Namespaces:
+**RAGworks Solution with Pinecone Namespaces:**
 
-✅ Dedicated namespace per user/document set
-✅ Complete data isolation at the vector database level
-✅ Higher precision retrieval with no cross-contamination
-✅ Scalable multi-tenant architecture
-✅ Efficient resource utilization
+- ✅ Dedicated namespace per user/document set
+- ✅ Complete data isolation at the vector database level
+- ✅ Higher precision retrieval with no cross-contamination
+- ✅ Scalable multi-tenant architecture
+- ✅ Efficient resource utilization
 
-Contact
-Abhiram Karanth
-Project Link: https://github.com/abhiram-karanth-core/faq-rag
-Live Demo: https://ragworks-wheat.vercel.app
+---
+
+
+## Contact
+
+**Abhiram Karanth**
+
+**Project Link:** [https://github.com/abhiram-karanth-core/faq-rag](https://github.com/abhiram-karanth-core/faq-rag)
+
+**Live Demo:** [https://ragworks-wheat.vercel.app](https://ragworks-wheat.vercel.app)
+
+---

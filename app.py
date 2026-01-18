@@ -204,5 +204,3 @@ def chunk_text_with_pages(page_texts, chunk_size=512, overlap=100):
     return chunks
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)

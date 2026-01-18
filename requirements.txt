@@ -8,3 +8,4 @@ PyPDF2
 pinecone
 langchain-mistralai
 gunicorn
+psycopg[binary]
